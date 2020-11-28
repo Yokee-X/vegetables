@@ -1,22 +1,24 @@
+/*
+ * @Author: Yokee
+ * @Date: 2020-11-28 00:39:04
+ * @LastEditTime: 2020-11-28 09:30:27
+ * @FilePath: \vegetables\src\router\index.js
+ */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import Lose from '../views/Lose.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path:'*',
+    component:Lose,
   }
 ]
 
